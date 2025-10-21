@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Clima Agora</h1>
+      <form id="search-form" class="search" autocomplete="off">
+        <input id="city-input" type="text" placeholder="Digite a cidade (ex.: São Paulo)" aria-label="Cidade" required />
+        <button id="search-btn" type="submit">Buscar</button>
+      </form>
+    </header>
+
+    <section id="status" class="status" aria-live="polite"></section>
+
+    <section id="weather" class="weather hidden" aria-live="polite">
+      <div class="location-row">
+        <h2 id="location-name">—</h2>
+        <span id="observation-time" class="muted">—</span>
+      </div>
+
+      <div class="current">
+        <div class="temp-block">
+          <span id="temperature" class="temp">—</span>
+          <span id="weather-code" class="desc">—</span>
+        </div>
+        <ul class="metrics">
+          <li><strong>Vento:</strong> <span id="wind">—</span></li>
+          <li><strong>Umidade:</strong> <span id="humidity">—</span></li>
+          <li><strong>Sensação:</strong> <span id="apparent">—</span></li>
+        </ul>
+      </div>
+
+      <div class="extra">
+        <div><strong>Pressão:</strong> <span id="pressure">—</span></div>
+        <div><strong>Chuva (1h):</strong> <span id="precip">—</span></div>
+        <div><strong>Nuvens:</strong> <span id="cloud">—</span></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
